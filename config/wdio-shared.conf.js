@@ -1,4 +1,3 @@
-const path = require("path");
 const { IS_USE_APPIUM_GLOBAL } = require("./constant.conf");
 
 exports.config = {
@@ -18,18 +17,6 @@ exports.config = {
       project: "./tsconfig.json",
     });
   },
-  capabilities: [
-    {
-      platformName: "Android",
-      "appium:platformVersion": "11",
-      "appium:automationName": "UiAutomator2",
-      "appium:deviceName": "emulator-5556",
-      "appium:app": path.join(process.cwd(), "./app/android/wdio.apk"),
-      "appium:noReset": true,
-      "appium:newCommandTimeout": 240,
-      "appium:autoGrantPermissions": true,
-    },
-  ],
 
   // Test configurations
   logLevel: "info",

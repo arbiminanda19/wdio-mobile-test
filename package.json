@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run config/wdio.conf.js"
+    "test:android": "wdio run config/wdio-android.conf.js",
+    "test:ios": "wdio run config/wdio-ios.conf.js"
   },
   "keywords": [],
   "author": "",

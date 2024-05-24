@@ -1,0 +1,21 @@
+import { isIOS } from "../../helper";
+
+const platform = {};
+platform.android = {
+  SPECIFIC_PRODUCT: (productName) =>
+    `//*[@content-desc="test-Item title" and contains(@text, '${productName}')]`,
+  CART_IMAGE: '//*[@content-desc="test-Cart"]',
+  CART_COUNT: () =>
+    `${platform.android.CART_IMAGE}/descendant::android.widget.TextView`,
+  BUTTON_ADD_TO_CART: '//*[@content-desc="test-ADD TO CART"]',
+  BUTTON_ADD_SPECIFIC_PRODUCT_TO_CART: (productName) =>
+    `${platform.android.SPECIFIC_PRODUCT(
+      productName
+    )}/following-sibling::*[@content-desc="test-ADD TO CART"]`,
+  BUTTON_REMOVE_FROM_CART: '//*[@content-desc="test-REMOVE"]',
+};
+
+platform.ios = {};
+
+const elements = isIOS() ? platform.ios : platform.android;
+module.exports = elements;

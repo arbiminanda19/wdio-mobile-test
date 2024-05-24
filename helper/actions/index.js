@@ -10,3 +10,4 @@ export {
 } from "./pause";
 export { default as setInputValue } from "./setInputValue";
 export { default as relaunchApp } from "./relaunchApp";
+export { default as scrollDownTo } from "./scrollDownTo";

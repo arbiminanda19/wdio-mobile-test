@@ -1,4 +1,4 @@
-const { IS_USE_APPIUM_GLOBAL } = require("./constant.conf");
+const { IS_USE_APPIUM_GLOBAL, SCENARIO_LISTS } = require("./constant.conf");
 
 exports.config = {
   // Runner configuration
@@ -6,7 +6,7 @@ exports.config = {
   port: 4723,
 
   // Test files
-  specs: ["./../test/specs/**/*.test.js"],
+  specs: [SCENARIO_LISTS],
   exclude: [],
 
   // Capabilities
@@ -24,7 +24,10 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: IS_USE_APPIUM_GLOBAL ? [] : [["appium", { command: "appium" }]],
+  services: IS_USE_APPIUM_GLOBAL ? [] : [["appium"]],
+  appium: {
+    command: "appium",
+  },
   framework: "mocha",
   reporters: ["spec"],
   mochaOpts: {

@@ -10,13 +10,14 @@ export {
   setInputValue,
   relaunchApp,
   scrollDownTo,
+  getNumber,
 } from "./actions";
 
-export { expectDisplayed } from "./asserts";
+export { expectDisplayed, expectGreaterThan } from "./asserts";
 
-export { isAndroid, isIOS } from "./checks";
+export { isAndroid, isIOS, isExist } from "./checks";
 
-export { waitForDisplayed } from "./waits";
+export { waitForDisplayed, waitForExist } from "./waits";
 
 export { default as getSelector } from "./getSelector";
 

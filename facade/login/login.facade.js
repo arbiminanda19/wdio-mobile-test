@@ -1,4 +1,5 @@
 import LoginController from "../../controller/login/login.controller";
+import ProductController from "../../controller/product/product.controller";
 import { pause } from "../../helper";
 
 class LoginFacade {
@@ -7,6 +8,7 @@ class LoginFacade {
     await LoginController.fillFieldEmailPassword(username, password);
     await LoginController.clickLoginButton();
     pause();
+    await ProductController.assertElementOnProductPage();
   }
 }
 

@@ -3,3 +3,6 @@ node_modules
 app/android/*.apk
 app/ios/*.app
 .DS_Store
+local.log
+.env
+logs/*

@@ -3,7 +3,7 @@ import getSelector from "../getSelector";
 import pause from "./pause";
 
 const scrollDownTo = async (testID, pauseTimeout) => {
-  let maxRetry = 5;
+  let maxRetry = 10;
   const destElement = await $(getSelector(testID));
 
   if (pauseTimeout) await pause(pauseTimeout);

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const LOGIN_SCENARIO = "./../scenarios/login/*.test.js";
 const PRODUCT_SCENARIO = "./../scenarios/product/*.test.js";
 
@@ -9,4 +11,8 @@ module.exports = {
   SCENARIO_LISTS: SCENARIO_LISTS,
   ANDROID_PACKAGE_ID: "com.swaglabsmobileapp",
   IOS_BUNDLE_ID: "com.swaglabsmobileapp",
+  BROWSERSTACK_USERNAME: process.env.BROWSERSTACK_USERNAME,
+  BROWSERSTACK_ACCESS_KEY: process.env.BROWSERSTACK_ACCESS_KEY,
+  ANDROID_BROWSERSTACK_APP_URL: process.env.ANDROID_BROWSERSTACK_APP_URL,
+  IOS_BROWSERSTACK_APP_URL: process.env.IOS_BROWSERSTACK_APP_URL,
 };

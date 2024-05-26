@@ -5,7 +5,7 @@
   "scripts": {
     "test:android": "wdio run config/wdio-android.conf.js",
     "test:ios": "wdio run config/wdio-ios.conf.js",
-    "test-bs:android": "wdio run config/wdio-android-bs.conf.js"
+    "test-bs:android": "wdio run config/wdio-android-bs.conf.js",
     "test-bs:ios": "wdio run config/wdio-ios-bs.conf.js"
   },
   "keywords": [],

@@ -15,8 +15,6 @@ config.capabilities = [
     ),
     "appium:appPackage": ANDROID_PACKAGE_ID,
     "appium:appActivity": "com.swaglabsmobileapp.MainActivity",
-    "appium:noReset": false,
-    "appium:fullReset": true,
     "appium:newCommandTimeout": 240,
     "appium:autoGrantPermissions": true,
   },

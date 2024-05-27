@@ -15,7 +15,14 @@ platform.android = {
   BUTTON_REMOVE_FROM_CART: '//*[@content-desc="test-REMOVE"]',
 };
 
-platform.ios = {};
+platform.ios = {
+  SPECIFIC_PRODUCT: (productName) => ``,
+  CART_IMAGE: '**/*[`name == "test-Cart"`]',
+  CART_COUNT: () => ``,
+  BUTTON_ADD_TO_CART: '**/*[`name == "test-ADD TO CART"`]',
+  BUTTON_ADD_SPECIFIC_PRODUCT_TO_CART: (productName) => ``,
+  BUTTON_REMOVE_FROM_CART: '**/*[`name == "test-REMOVE"`]',
+};
 
 const elements = isIOS() ? platform.ios : platform.android;
 module.exports = elements;

@@ -8,9 +8,9 @@ platform.android = {
 };
 
 platform.ios = {
-  TEXT_INPUT_USERNAME: ``,
-  TEXT_INPUT_PASSWORD: ``,
-  BUTTON_SUBMIT_LOGIN: ``,
+  TEXT_INPUT_USERNAME: '**/*[`name == "test-Username"`]',
+  TEXT_INPUT_PASSWORD: '**/*[`name == "test-Password"`]',
+  BUTTON_SUBMIT_LOGIN: '**/*[`name == "test-LOGIN"`]',
 };
 
 const elements = isIOS() ? platform.ios : platform.android;

@@ -10,7 +10,7 @@ module.exports = {
   FILE_NAME: "saucelabs",
   SCENARIO_LISTS: SCENARIO_LISTS,
   ANDROID_PACKAGE_ID: "com.swaglabsmobileapp",
-  IOS_BUNDLE_ID: "com.swaglabsmobileapp",
+  IOS_BUNDLE_ID: "com.saucelabs.SwagLabsMobileApp",
   BROWSERSTACK_USERNAME: process.env.BROWSERSTACK_USERNAME,
   BROWSERSTACK_ACCESS_KEY: process.env.BROWSERSTACK_ACCESS_KEY,
   ANDROID_BROWSERSTACK_APP_URL: process.env.ANDROID_BROWSERSTACK_APP_URL,

@@ -5,6 +5,7 @@ import {
   scrollDownTo,
   isExist,
   getNumber,
+  isIOS,
 } from "../../helper";
 import BaseController from "../base.controller";
 import { DEFAULT_VERY_SHORT_WAIT } from "../../constant/time.constant";
@@ -19,10 +20,18 @@ class ProductController extends BaseController {
   }
 
   async getCartAmount() {
-    if (await isExist(ProductPage.CART_COUNT(), DEFAULT_VERY_SHORT_WAIT)) {
-      return await getNumber(ProductPage.CART_COUNT());
+    if (isIOS()) {
+      try {
+        return await getNumber(ProductPage.CART_COUNT());
+      } catch (error) {
+        return 0;
+      }
     } else {
-      return 0;
+      if (await isExist(ProductPage.CART_COUNT(), DEFAULT_VERY_SHORT_WAIT)) {
+        return await getNumber(ProductPage.CART_COUNT());
+      } else {
+        return 0;
+      }
     }
   }
 

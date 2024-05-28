@@ -12,7 +12,7 @@ config.capabilities = [
     "appium:app": path.join(process.cwd(), "./app/ios/" + FILE_NAME + ".app"),
     "appium:bundleId": IOS_BUNDLE_ID,
     "appium:newCommandTimeout": 240,
-    "appium:autoGrantPermissions": true,
+    "appium:autoAcceptAlerts": true,
   },
 ];
 

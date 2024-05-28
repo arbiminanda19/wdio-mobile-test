@@ -16,11 +16,15 @@ platform.android = {
 };
 
 platform.ios = {
-  SPECIFIC_PRODUCT: (productName) => ``,
+  SPECIFIC_PRODUCT: (productName) =>
+    `**/*[\`name == "test-Item" AND label CONTAINS "${productName}"\`]`,
   CART_IMAGE: '**/*[`name == "test-Cart"`]',
-  CART_COUNT: () => ``,
+  CART_COUNT: () => platform.ios.CART_IMAGE,
   BUTTON_ADD_TO_CART: '**/*[`name == "test-ADD TO CART"`]',
-  BUTTON_ADD_SPECIFIC_PRODUCT_TO_CART: (productName) => ``,
+  BUTTON_ADD_SPECIFIC_PRODUCT_TO_CART: (productName) =>
+    `${platform.ios.SPECIFIC_PRODUCT(
+      productName
+    )}/*/*/*[\`name == "ADD TO CART"\`]`,
   BUTTON_REMOVE_FROM_CART: '**/*[`name == "test-REMOVE"`]',
 };
 

@@ -1,7 +1,7 @@
 package-lock.json
 node_modules
-app/android/*.apk
-app/ios/*.app
+app/android/*
+app/ios/*
 .DS_Store
 local.log
 .env

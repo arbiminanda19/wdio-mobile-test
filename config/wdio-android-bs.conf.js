@@ -14,8 +14,9 @@ config.capabilities = [
   },
 ];
 
-config.commonCapabilities["bstack:options"].buildName =
-  "SauceLabs App Test - Android";
+config.commonCapabilities[
+  "bstack:options"
+].buildName = `SauceLabs App Test - Android - ${Date.now()}`;
 config.commonCapabilities["appium:app"] = ANDROID_BROWSERSTACK_APP_URL;
 
 exports.config = config;

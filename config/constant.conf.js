@@ -15,4 +15,7 @@ module.exports = {
   BROWSERSTACK_ACCESS_KEY: process.env.BROWSERSTACK_ACCESS_KEY,
   ANDROID_BROWSERSTACK_APP_URL: process.env.ANDROID_BROWSERSTACK_APP_URL,
   IOS_BROWSERSTACK_APP_URL: process.env.IOS_BROWSERSTACK_APP_URL,
+  TIMESTAMP: `${new Date().getDate}/${new Date().getMonth}/${
+    new Date().getFullYear
+  }, ${new Date().getHours()}:${new Date().getMinutes()}`,
 };

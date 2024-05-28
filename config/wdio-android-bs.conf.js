@@ -1,4 +1,4 @@
-const { ANDROID_BROWSERSTACK_APP_URL } = require("./constant.conf");
+const { ANDROID_BROWSERSTACK_APP_URL, TIMESTAMP } = require("./constant.conf");
 const { config } = require("./wdio-shared-bs.conf");
 
 config.capabilities = [
@@ -16,7 +16,7 @@ config.capabilities = [
 
 config.commonCapabilities[
   "bstack:options"
-].buildName = `SauceLabs App Test - Android - ${Date.now()}`;
+].buildName = `SauceLabs App Test - Android - ${TIMESTAMP}`;
 config.commonCapabilities["appium:app"] = ANDROID_BROWSERSTACK_APP_URL;
 
 exports.config = config;

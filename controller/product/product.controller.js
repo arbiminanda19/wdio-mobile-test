@@ -6,6 +6,7 @@ import {
   isExist,
   getNumber,
   isIOS,
+  longPause,
 } from "../../helper";
 import BaseController from "../base.controller";
 import { DEFAULT_VERY_SHORT_WAIT } from "../../constant/time.constant";
@@ -16,6 +17,7 @@ class ProductController extends BaseController {
     const elementTarget =
       ProductPage.BUTTON_ADD_SPECIFIC_PRODUCT_TO_CART(productName);
     await scrollDownTo(elementTarget);
+    longPause();
     await click(elementTarget);
   }
 

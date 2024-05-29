@@ -6,3 +6,6 @@ app/ios/*
 local.log
 .env
 logs/*
+allure-results
+allure-report
+browserstack.err
